@@ -1,0 +1,25 @@
+.container {
+	margin-top: 70px;
+}
+
+.navbar-header {
+	margin-top: 5px;
+}
+
+.nav-pills {
+	font-weight: bold;
+}
+
+.container-fluid {
+	display: block;
+    margin: auto;
+    width: 940px;
+}
+
+.home-title {
+	font-family: 'Ubuntu', sans-serif;
+	color: #073b8e;
+	text-align: center;
+	font-size: 40px;
+	margin-bottom: 20px;
+}
