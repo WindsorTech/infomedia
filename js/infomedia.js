@@ -8,9 +8,12 @@ var request = require('request');
 
 var spotify = require('spotify');
 
- $(".movies").click(function() {  //use a class, since your ID gets mangled
-    $(".movies").addClass("active");
-  });
+
+
+ $('.twitterbtn').on('click', function(){
+
+ 	$(".twitterbtn").addClass("active");
+ });
 
 });
 
