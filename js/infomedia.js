@@ -9,9 +9,9 @@ var spotify = require('spotify');
 
 $(document).ready(function() {
 
- $('.btn').on('click', function(){
+ $("button").on('click', function(){
 
- 	$(".btn").addClass("disabled");
+ 	$("button").addClass("redy");
  });
 
 });
