@@ -9,10 +9,7 @@ var spotify = require('spotify');
 
 $(document).ready(function() {
 
- $("button").on('click', function(){
-
- 	$("button").addClass("redy");
- });
+$(document).find(".botao").hide();
 
 });
 
