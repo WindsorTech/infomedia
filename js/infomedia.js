@@ -1,5 +1,3 @@
-$(document).ready(function() {
-
 var fs = require('fs');
 
 var Twitter = require('twitter');
@@ -9,10 +7,11 @@ var request = require('request');
 var spotify = require('spotify');
 
 
+$(document).ready(function() {
 
- $('.twitterbtn').on('click', function(){
+ $('.btn').on('click', function(){
 
- 	$(".twitterbtn").addClass("active");
+ 	$(".btn").addClass("disabled");
  });
 
 });
