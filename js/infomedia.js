@@ -9,7 +9,7 @@ var request = require('request');
 var spotify = require('spotify');
 
  $(".movies").click(function() {  //use a class, since your ID gets mangled
-    $(this).addClass("active");
+    $(".movies").addClass("active");
   });
 
 });
