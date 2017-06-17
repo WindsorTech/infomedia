@@ -1,5 +1,8 @@
 $(document).ready(function() {
 
+var searchTerm;
+
+// Menu Buttons click selection
 $(".movies").click(function(){
 
 	$('.movies').addClass('active');
@@ -20,6 +23,19 @@ $(".news").click(function(){
 	$('.movies').removeClass('active');
 	$('.music').removeClass('active');
 });
+
+
+$(".btn-success").click(function(){
+
+	searchTerm = $(".user-input").val();
+
+	$('.results').text(searchTerm);
+
+	console.log(searchTerm);
+
+});
+
+
 
 
 
