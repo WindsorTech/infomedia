@@ -1,7 +1,5 @@
 $(document).ready(function() {
 
-$('select').material_select();
-
 // Global variables
 
 var keys = require('./keys.js');
