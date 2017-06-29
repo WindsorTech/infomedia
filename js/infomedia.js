@@ -31,7 +31,7 @@ $(".fire").click(function(){
 
 	$.ajax({
 
-		url: "http://ws.audioscrobbler.com/2.0/?method=track.search&limit=10&track=" + searchTerm + "&api_key=3ed080989b346fe17d267cb64b68d169&format=json",
+		url: "https://ws.audioscrobbler.com/2.0/?method=track.search&limit=10&track=" + searchTerm + "&api_key=3ed080989b346fe17d267cb64b68d169&format=json",
 		method: "GET"
 
 	}).done(function(response){
