@@ -27,30 +27,32 @@ $(".fire").click(function(){
 
 	var searchTerm = $(".user-input").val();
 
-	// $('.results').text(searchTerm);
+	//console.log(searchTerm);
 
-	// console.log(searchTerm);
+	$.ajax({
 
-	spotifyCall(searchTerm);
+		url: "http://ws.audioscrobbler.com/2.0/?method=track.search&limit=10&track=" + searchTerm + "&api_key=3ed080989b346fe17d267cb64b68d169&format=json",
+		method: "GET"
+
+	}).done(function(response){
+
+		var musicarray = response.results.trackmatches.track;
+
+		var displaymusic = [];
+
+		 for (var i = 0; i < musicarray.length; i++) {
+
+		    displaymusic.push('<p>' + musicarray[i].artist + '</p>');
+
+		  }
+
+		$(".results").html(displaymusic.join(""));
+
+		console.log(response);
+
+	});
 
 });
-
-function spotifyCall(searchTerm) {
-
-    spotify.search({ type: 'track', query: searchTerm }, function(err, data) {
-    if ( err ) {
-        console.log('Error occurred: ' + err);
-        return;
-    }
-    console.log('Artist: ' + data.tracks.items[0].album.artists[0].name);
-    console.log('Song Name: ' + data.tracks.items[0].name);
-    console.log('Album: ' + data.tracks.items[0].album.name);
-    console.log('Preview Link: ' + data.tracks.items[0].preview_url);   
-});
-
-}
-
-
 
 
 
