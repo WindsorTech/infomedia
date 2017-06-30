@@ -22,13 +22,15 @@ $(".news").click(function(){
 	$('.music').removeClass('active');
 });
 
+//=================================================//
 
+// On click of the Submit button
 $(".fire").click(function(){
 
+	// Get the user input in text field
 	var searchTerm = $(".user-input").val();
 
-	//console.log(searchTerm);
-
+	// Ajax call to Last.fm API
 	$.ajax({
 
 		url: "https://ws.audioscrobbler.com/2.0/?method=track.search&limit=10&track=" + searchTerm + "&api_key=3ed080989b346fe17d267cb64b68d169&format=json",
@@ -36,17 +38,27 @@ $(".fire").click(function(){
 
 	}).done(function(response){
 
+		// Put the API response array into a variable
 		var musicarray = response.results.trackmatches.track;
 
-		var displaymusic = [];
+		// Create empty array to insert songs info
+		var displaysongs = [];
 
-		 for (var i = 0; i < musicarray.length; i++) {
+		// Loop through the API musicarray
+		for (var i = 0; i < musicarray.length; i++) {
+			
+			// Insert song names into the displaysongs array
+		    displaysongs.push("<p><b>Song:</b> " + musicarray[i].name);
 
-		    displaymusic.push('<p>' + musicarray[i].artist + '</p>');
+		    // Insert artists names into the displaysongs array
+		    displaysongs.push(" - <b> Artist:</b> " + musicarray[i].artist + "</p>");
 
-		  }
+		 };
 
-		$(".results").html(displaymusic.join(""));
+
+		$(".results").html(displaysongs.join(""));
+
+		console.log(displaysongs);
 
 		console.log(response);
 
