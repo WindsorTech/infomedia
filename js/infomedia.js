@@ -67,24 +67,21 @@ function musicSearch() {
 		// Create empty array to insert songs info
 		var displaysongs = [];
 
-		var imagearray = [];
-
 		// Loop through the API musicarray
 		for (var i = 0; i < musicarray.length; i++) {
 
-			imagearray.push(musicarray[i].image[0]);
+			// Insert each song's image into the displaysongs array
+			displaysongs.push("<table class='tablez'><tr><td><img src=" + musicarray[i].image[1]["#text"] + ">&nbsp;&nbsp;</td>");
 			
 			// Insert song names into the displaysongs array
-		    displaysongs.push("<b>Song:</b> " + musicarray[i].name + " - ");
+		    displaysongs.push("<td><b>Song:</b> " + musicarray[i].name + "<br>");
 
 		    // Insert artists names into the displaysongs array
-		    displaysongs.push("<b>Artist:</b> " + musicarray[i].artist + "&nbsp;&nbsp;");
+		    displaysongs.push("<b>Artist:</b> " + musicarray[i].artist + "<br>");
 
 		    // Insert song links into the array
-		    displaysongs.push("<a href=" + musicarray[i].url +" target='_blank' class='btn btn-primary btn-xs'>More Info</a><br><hr>");
+		    displaysongs.push("<a href=" + musicarray[i].url +" target='_blank' class='btn btn-primary btn-xs'>More Info</a></td></tr></table><hr>");
 
-
-		    //displaysongs.push("<b>Image:</b> " + musicarray[i].image[3] + "<br><br>");
 
 		 };
 

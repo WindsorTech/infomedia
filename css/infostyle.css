@@ -11,8 +11,15 @@ hr {
 }
 
 .results {
-	font-size: 18px;
-	text-align: center;
+	font-size: 16px;
+}
+
+.tablez {
+	margin-left: 40%;
+}
+
+.song {
+	margin-top: 200px;
 }
 
 .navbar-header {
