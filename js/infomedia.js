@@ -24,6 +24,19 @@ $(".news").click(function(){
 
 //=================================================//
 
+// If user presses the Enter key instead of Submit button
+$(".user-input").on("keydown", function(e) {
+
+		// if the key is Enter
+        if (e.keyCode == 13) {
+
+        	// Fire the button click
+        	$(".fire").click();
+
+        	return false;
+        }
+});
+
 // On click of the Submit button
 $(".fire").click(function(){
 
@@ -32,11 +45,8 @@ $(".fire").click(function(){
 
 });
 
-$(".user-input").keypress(function(e){
-    if(e.which === 13){
-        $(".fire").click();
-    }
-});
+
+//==========================================//
 
 function musicSearch() {
 
@@ -71,10 +81,7 @@ function musicSearch() {
 		    displaysongs.push("<b>Artist:</b> " + musicarray[i].artist + "&nbsp;&nbsp;");
 
 		    // Insert song links into the array
-		    displaysongs.push("<a href=" + musicarray[i].url +" target='_blank' class='btn btn-primary btn-xs'>Click for more</a><br><hr>");
-
-
-
+		    displaysongs.push("<a href=" + musicarray[i].url +" target='_blank' class='btn btn-primary btn-xs'>More Info</a><br><hr>");
 
 
 		    //displaysongs.push("<b>Image:</b> " + musicarray[i].image[3] + "<br><br>");
