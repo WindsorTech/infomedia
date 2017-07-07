@@ -2,8 +2,12 @@ hr {
 	border-color: #bfbfbf;
 }
 
+.advert {
+	margin-top: 30px;
+}
+
 .container {
-	margin-top: 70px;
+	margin-top: 30px;
 }
 
 .results {
