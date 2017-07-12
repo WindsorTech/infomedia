@@ -2,6 +2,14 @@ hr {
 	border-color: #bfbfbf;
 }
 
+.music-pic {
+	margin-right: 10px;
+}
+
+.movie-pic {
+	margin-right: 20px;
+}
+
 .advert {
 	margin-top: 30px;
 }
@@ -16,6 +24,10 @@ hr {
 
 .song-table {
 	margin-left: 25%;
+}
+
+.movie-text {
+	font-size: 20px;
 }
 
 .song {

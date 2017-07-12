@@ -86,7 +86,7 @@ function musicSearch() {
 		for (var i = 0; i < 10; i++) {
 
 			// Insert each song's image into the displaysongs array
-			displaysongsleft.push("<table class='song-table'><tr><td><img src=" + musicarray[i].image[1]["#text"] + ">&nbsp;&nbsp;&nbsp;</td>");
+			displaysongsleft.push("<table class='song-table'><tr><td><img class='music-pic' src=" + musicarray[i].image[1]["#text"] + "></td>");
 			
 			// Insert song names into the displaysongs array
 		    displaysongsleft.push("<td><b>Song:</b> " + musicarray[i].name + "<br>");
@@ -104,7 +104,7 @@ function musicSearch() {
 		for (var i = 10; i < 20; i++) {
 
 			// Insert each song's image into the displaysongs array
-			displaysongsright.push("<table class='song-table'><tr><td><img src=" + musicarray[i].image[1]["#text"] + ">&nbsp;&nbsp;</td>");
+			displaysongsright.push("<table class='song-table'><tr><td><img class='music-pic' src=" + musicarray[i].image[1]["#text"] + "></td>");
 			
 			// Insert song names into the displaysongs array
 		    displaysongsright.push("<td><b>Song:</b> " + musicarray[i].name + "<br>");
@@ -151,13 +151,13 @@ function movieSearch() {
 
 		for (var i = 0; i < 20; i++) {
 
-			movieresults.push("<img src='https://image.tmdb.org/t/p/original"+ moviearray[i].poster_path +"' width=150 height=200>");
+			movieresults.push("<table class='movie-text'><tr><td><img class='movie-pic' src='https://image.tmdb.org/t/p/original"+ moviearray[i].poster_path +"' width=150 height=200></td>&nbsp;&nbsp;&nbsp;&nbsp;");
 
-			movieresults.push("<b>Movie Title:</b> " + moviearray[i].title + "<br>");
+			movieresults.push("<td><b>Movie Title:</b> " + moviearray[i].title + "<br>");
 
 			movieresults.push("<b>Release Date:</b> " + moviearray[i].release_date + "<br>");
 
-			movieresults.push("<b>Overview:</b> " + moviearray[i].overview + "<br><hr>");
+			movieresults.push("<b>Overview:</b> " + moviearray[i].overview + "</td></tr></table><br><hr>");
 
 		}
 
