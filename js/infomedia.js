@@ -50,7 +50,7 @@ $(".fire").click(function(){
 		musicSearch();
    	} // if the movie handle is selected
    	else if ($('.movies').hasClass('active')) {
-   		alert('MOVIES ACTIVE!');
+   		movieSearch();
    	} // if the news handle is selected 
    	else if ($('.news').hasClass('active')) {
    		alert('LATEST NEWS!');
@@ -126,11 +126,49 @@ function musicSearch() {
 
 		console.log(response);
 
-		console.log(imagearray);
+	});
+
+}
+
+//===============================================================//
+
+function movieSearch() {
+
+	var searchTerm = $(".user-input").val().trim();
+
+	$.ajax({
+
+		url: "https://api.themoviedb.org/3/search/movie?api_key=0bf8a8c93d69a18b3d61366957b2e726&query="+ searchTerm +"",
+		method: "GET"
+
+	}).done(function(response){
+
+		console.log(response);
+
+		var moviearray = response.results;
+
+		var movieresults = [];
+
+		for (var i = 0; i < 20; i++) {
+
+			movieresults.push("<img src='https://image.tmdb.org/t/p/original"+ moviearray[i].poster_path +"' width=150 height=200>");
+
+			movieresults.push("<b>Movie Title:</b> " + moviearray[i].title + "<br>");
+
+			movieresults.push("<b>Release Date:</b> " + moviearray[i].release_date + "<br>");
+
+			movieresults.push("<b>Overview:</b> " + moviearray[i].overview + "<br><hr>");
+
+		}
+
+
+		$(".results").html(movieresults.join(""));
 
 	});
 
-	$(".footer").show();
+
+
+
 
 }
 
