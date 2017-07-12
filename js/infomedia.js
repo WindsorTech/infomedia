@@ -3,19 +3,20 @@ $(document).ready(function() {
 $(".footer").hide();
 
 // Menu Buttons click selection
-$(".movies").click(function(){
-
-	$('.movies').addClass('active');
-	$('.music').removeClass('active');
-	$('.news').removeClass('active');
-
-});
 
 $(".music").click(function(){
 
 	$('.music').addClass('active');
 	$('.movies').removeClass('active');
 	$('.news').removeClass('active');
+});
+
+$(".movies").click(function(){
+
+	$('.movies').addClass('active');
+	$('.music').removeClass('active');
+	$('.news').removeClass('active');
+
 });
 
 $(".news").click(function(){
@@ -43,11 +44,19 @@ $(".user-input").on("keydown", function(e) {
 // On click of the Submit button
 $(".fire").click(function(){
 
-	// call the musicSearch function
-	musicSearch();
+	// if the music handle is seletec
+	if ($('.music').hasClass('active')) {
+      	// call the musicSearch function
+		musicSearch();
+   	} // if the movie handle is selected
+   	else if ($('.movies').hasClass('active')) {
+   		alert('MOVIES ACTIVE!');
+   	} // if the news handle is selected 
+   	else if ($('.news').hasClass('active')) {
+   		alert('LATEST NEWS!');
+   	}
 
 });
-
 
 //=================================================//
 
