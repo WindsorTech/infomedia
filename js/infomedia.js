@@ -1,29 +1,49 @@
 $(document).ready(function() {
 
+// Hide Footer
 $(".footer").hide();
+
+// Variable to reset the results field
+var resetresults = $(".results").html();
 
 // Menu Buttons click selection
 
 $(".music").click(function(){
 
+	// Change button focus on click
 	$('.music').addClass('active');
 	$('.movies').removeClass('active');
 	$('.news').removeClass('active');
+
+	// Reset fields
+	$(".results").html(resetresults);
+	$(".user-input").val('');
 });
 
 $(".movies").click(function(){
 
+	// Change button focus on click
 	$('.movies').addClass('active');
 	$('.music').removeClass('active');
 	$('.news').removeClass('active');
+
+	// Reset fields
+	$(".results").html(resetresults);
+	$(".user-input").val('');
+
 
 });
 
 $(".news").click(function(){
 
+	// Change button focus on click
 	$('.news').addClass('active');
 	$('.movies').removeClass('active');
 	$('.music').removeClass('active');
+
+	// Reset fields
+	$(".results").html(resetresults);
+	$(".user-input").val('');
 });
 
 //=================================================//
@@ -124,7 +144,7 @@ function musicSearch() {
 		// display songs info array on page right side
 		$(".right-side").html(displaysongsright.join(""));
 
-		console.log(response);
+		//console.log(response);
 
 	});
 
@@ -134,46 +154,47 @@ function musicSearch() {
 
 function movieSearch() {
 
+	// Get the user input in text field
 	var searchTerm = $(".user-input").val().trim();
 
+	// Ajax call to the Movie DB API
 	$.ajax({
 
 		url: "https://api.themoviedb.org/3/search/movie?api_key=0bf8a8c93d69a18b3d61366957b2e726&query="+ searchTerm +"",
 		method: "GET"
 
+
 	}).done(function(response){
 
-		console.log(response);
-
+		// Put the API response array into a variable
 		var moviearray = response.results;
 
+		// Create empty array to display the movie results
 		var movieresults = [];
 
+		// Loop through the 20 results of the API moviearray 
 		for (var i = 0; i < 20; i++) {
 
+			// Insert each movie's image into the results array
 			movieresults.push("<table class='movie-text'><tr><td><img class='movie-pic' src='https://image.tmdb.org/t/p/original"+ moviearray[i].poster_path +"' width=150 height=200></td>&nbsp;&nbsp;&nbsp;&nbsp;");
 
+			// Insert each movie's title into the results array
 			movieresults.push("<td><b>Movie Title:</b> " + moviearray[i].title + "<br>");
 
+			// Insert each movie's date into the results array
 			movieresults.push("<b>Release Date:</b> " + moviearray[i].release_date + "<br>");
 
+			// Insert each movie's overview into the results array
 			movieresults.push("<b>Overview:</b> " + moviearray[i].overview + "</td></tr></table><br><hr>");
 
 		}
 
-
+		// display movie results array on the page
 		$(".results").html(movieresults.join(""));
 
 	});
 
-
-
-
-
 }
 
 
-
 });
-
-
