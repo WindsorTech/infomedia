@@ -166,6 +166,8 @@ function movieSearch() {
 
 	}).done(function(response){
 
+		console.log(response);
+
 		// Put the API response array into a variable
 		var moviearray = response.results;
 
