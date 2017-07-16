@@ -73,7 +73,7 @@ $(".fire").click(function(){
    		movieSearch();
    	} // if the news handle is selected 
    	else if ($('.news').hasClass('active')) {
-   		alert('LATEST NEWS!');
+   		newsSearch();
    	}
 
 });
@@ -195,6 +195,51 @@ function movieSearch() {
 		$(".results").html(movieresults.join(""));
 
 	});
+
+}
+
+//===============================================================//
+
+function newsSearch() {
+
+	// Get the user input in text field
+	var searchTerm = $(".user-input").val().trim();
+
+
+	var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
+
+		url += '?' + $.param({
+		  'api-key': "575b62a9683544cebd2f87a73bf83854",
+		  'q': searchTerm,
+		  'sort': "newest"
+		});
+		$.ajax({
+		  url: url,
+		  method: 'GET',
+		}).done(function(result) {
+		  
+		  console.log(result);
+
+		  var newsarray = result.response.docs;
+
+		  var newsresults = [];
+
+		  for (var i = 0; i < newsarray.length; i++) {
+
+		  	newsresults.push("<b>News Title:</b> " + newsarray[i].headline.print_headline + "<br>");
+
+		  	newsresults.push("<b>Summary:</b> " + newsarray[i].lead_paragraph + "<br><hr><br>");
+
+		  }
+
+		  $(".results").html(newsresults.join(""));
+
+		}).fail(function(err) {
+		  throw err;
+		});
+
+
+
 
 }
 
