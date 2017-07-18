@@ -1,8 +1,5 @@
 $(document).ready(function() {
 
-// Hide Footer
-$(".footer").hide();
-
 // Variable to reset the results field
 var resetresults = $(".results").html();
 
@@ -102,6 +99,9 @@ function musicSearch() {
 		// Create empty array to display songs on right side
 		var displaysongsright = [];
 
+		// Create empty array to display Last.fm Logo
+		var displaylogo = [];
+
 		// Loop through the API musicarray - results 1 to 10
 		for (var i = 0; i < 10; i++) {
 
@@ -138,13 +138,17 @@ function musicSearch() {
 
 		 };
 
+		// Insert logo into array
+		displaylogo.push("<center><img src='images/lastfm.png' width=160 height=50></center><br>");
+
 		// display songs info array on page left side
 		$(".left-side").html(displaysongsleft.join(""));
 
 		// display songs info array on page right side
 		$(".right-side").html(displaysongsright.join(""));
 
-		//console.log(response);
+		// display logo in footer
+		$(".footer").html(displaylogo.join(""));
 
 	});
 
@@ -166,7 +170,7 @@ function movieSearch() {
 
 	}).done(function(response){
 
-		console.log(response);
+		//console.log(response);
 
 		// Put the API response array into a variable
 		var moviearray = response.results;
@@ -190,8 +194,8 @@ function movieSearch() {
 			movieresults.push("<b>Overview:</b> " + moviearray[i].overview + "</td></tr></table><br><hr>");
 
 		}
-
-			movieresults.push("<center><img src='images/moviedb.png' width=160 height=60></center><br>");
+		// display MovieDB icon on footer
+		movieresults.push("<center><img src='images/moviedb.png' width=160 height=60></center><br>");
 
 		// display movie results array on the page
 		$(".results").html(movieresults.join(""));
