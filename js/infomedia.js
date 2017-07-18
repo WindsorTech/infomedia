@@ -274,8 +274,9 @@ function gifSearch() {
 
 		}
 
-		gifresults.push("<hr><br>");
+		//gifresults.push("<hr><br>");
 
+		gifresults.push("<hr><center><img src='images/giphy.png' width=160 height=45></center><br>");
 
 		$(".results").html(gifresults.join(""));
 
