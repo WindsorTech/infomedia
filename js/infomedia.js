@@ -191,6 +191,8 @@ function movieSearch() {
 
 		}
 
+			movieresults.push("<center><img src='images/moviedb.png' width=160 height=60></center><br>");
+
 		// display movie results array on the page
 		$(".results").html(movieresults.join(""));
 
@@ -205,41 +207,18 @@ function newsSearch() {
 	// Get the user input in text field
 	var searchTerm = $(".user-input").val().trim();
 
+	// Ajax call to the Movie DB API
+	$.ajax({
 
-	var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
-
-		url += '?' + $.param({
-		  'api-key': "575b62a9683544cebd2f87a73bf83854",
-		  'q': searchTerm,
-		  'sort': "newest"
-		});
-		$.ajax({
-		  url: url,
-		  method: 'GET',
-		}).done(function(result) {
-		  
-		  console.log(result);
-
-		  var newsarray = result.response.docs;
-
-		  var newsresults = [];
-
-		  for (var i = 0; i < newsarray.length; i++) {
-
-		  	newsresults.push("<b>News Title:</b> " + newsarray[i].headline.print_headline + "<br>");
-
-		  	newsresults.push("<b>Summary:</b> " + newsarray[i].lead_paragraph + "<br><hr><br>");
-
-		  }
-
-		  $(".results").html(newsresults.join(""));
-
-		}).fail(function(err) {
-		  throw err;
-		});
+		url: "http://www.faroo.com/instant.json?q=iphone&start=1&length=10&l=en&src=web&i=false&c=false",
+		method: "GET"
 
 
+	}).done(function(response){
 
+		console.log(response);
+
+	});
 
 }
 
