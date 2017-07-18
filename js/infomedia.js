@@ -11,6 +11,7 @@ $(".music").click(function(){
 	$('.music').addClass('active');
 	$('.movies').removeClass('active');
 	$('.news').removeClass('active');
+	$('.gifs').removeClass('active');
 
 	// Reset fields
 	$(".results").html(resetresults);
@@ -23,6 +24,7 @@ $(".movies").click(function(){
 	$('.movies').addClass('active');
 	$('.music').removeClass('active');
 	$('.news').removeClass('active');
+	$('.gifs').removeClass('active');
 
 	// Reset fields
 	$(".results").html(resetresults);
@@ -35,6 +37,20 @@ $(".news").click(function(){
 
 	// Change button focus on click
 	$('.news').addClass('active');
+	$('.movies').removeClass('active');
+	$('.music').removeClass('active');
+	$('.gifs').removeClass('active');
+
+	// Reset fields
+	$(".results").html(resetresults);
+	$(".user-input").val('');
+});
+
+$(".gifs").click(function(){
+
+	// Change button focus on click
+	$('.gifs').addClass('active');
+	$('.news').removeClass('active');
 	$('.movies').removeClass('active');
 	$('.music').removeClass('active');
 
@@ -71,6 +87,9 @@ $(".fire").click(function(){
    	} // if the news handle is selected 
    	else if ($('.news').hasClass('active')) {
    		newsSearch();
+   	}
+   	else if ($('.gifs').hasClass('active')) {
+   		gifSearch();
    	}
 
 });
@@ -223,6 +242,45 @@ function newsSearch() {
 		console.log(response);
 
 	});
+
+}
+
+//=================================================================//
+
+function gifSearch() {
+
+	// Get the user input in text field
+	var searchTerm = $(".user-input").val().trim();
+
+	// Ajax call to the Movie DB API
+	$.ajax({
+
+		url: "http://api.giphy.com/v1/gifs/search?q="+ searchTerm +"&api_key=7b327206a9284ab988a6d8be3fa003a2&limit=30",
+		method: "GET"
+
+
+	}).done(function(response){
+
+		console.log(response);
+
+		var gifarray = response.data;
+
+		var gifresults = [];
+
+		for (var i = 0; i < gifarray.length; i++) {
+
+
+			gifresults.push("&nbsp;&nbsp;<img src='"+ gifarray[i].images.fixed_width.url +"'>&nbsp;&nbsp;&nbsp;&nbsp;");
+
+		}
+
+		gifresults.push("<hr><br>");
+
+
+		$(".results").html(gifresults.join(""));
+
+	});
+
 
 }
 
