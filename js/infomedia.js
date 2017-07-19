@@ -255,7 +255,7 @@ function gifSearch() {
 	// Ajax call to the Movie DB API
 	$.ajax({
 
-		url: "http://api.giphy.com/v1/gifs/search?q="+ searchTerm +"&api_key=7b327206a9284ab988a6d8be3fa003a2&limit=30",
+		url: "https://api.giphy.com/v1/gifs/search?q="+ searchTerm +"&api_key=7b327206a9284ab988a6d8be3fa003a2&limit=30",
 		method: "GET"
 
 
