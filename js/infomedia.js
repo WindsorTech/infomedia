@@ -77,17 +77,16 @@ $(".user-input").on("keydown", function(e) {
 // On click of the Submit button
 $(".fire").click(function(){
 
-	// if the music handle is seletec
+	// if the music handle is selected, call its function
 	if ($('.music').hasClass('active')) {
-      	// call the musicSearch function
 		musicSearch();
-   	} // if the movie handle is selected
+   	} // if the movie handle is selected, call its function
    	else if ($('.movies').hasClass('active')) {
    		movieSearch();
-   	} // if the news handle is selected 
+   	} // if the news handle is selected, call its function
    	else if ($('.news').hasClass('active')) {
    		newsSearch();
-   	}
+   	} // if the gifs handle is selected, call its function
    	else if ($('.gifs').hasClass('active')) {
    		gifSearch();
    	}
@@ -273,8 +272,6 @@ function gifSearch() {
 			gifresults.push("&nbsp;&nbsp;<img src='"+ gifarray[i].images.fixed_width.url +"'>&nbsp;&nbsp;&nbsp;&nbsp;");
 
 		}
-
-		//gifresults.push("<hr><br>");
 
 		gifresults.push("<hr><center><img src='images/giphy.png' width=160 height=45></center><br>");
 
