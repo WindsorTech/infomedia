@@ -229,18 +229,53 @@ function newsSearch() {
 	// Get the user input in text field
 	var searchTerm = $(".user-input").val().trim();
 
-	// Ajax call to the Movie DB API
-	$.ajax({
 
-		url: "http://www.faroo.com/instant.json?q=iphone&start=1&length=10&l=en&src=web&i=false&c=false",
-		method: "GET"
+	var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
 
+		url += '?' + $.param({
+		  'api-key': "575b62a9683544cebd2f87a73bf83854",
+		  'q': searchTerm,
+		  'sort': "newest"
+		});
+		$.ajax({
+		  url: url,
+		  method: 'GET',
+		}).done(function(result) {
+		  
+		  console.log(result);
 
-	}).done(function(response){
+		  var newsarray = result.response.docs;
 
-		console.log(response);
+		  var newsresults = [];
 
-	});
+		  for (var i = 0; i < newsarray.length; i++) {
+
+		  	// Insert each movie's image into the results array
+			//newsresults.push("<table><tr><td><img src='https://www.nytimes.com/"+ newsarray[i].multimedia[1].url +"'></td>&nbsp;&nbsp;&nbsp;&nbsp;");
+			
+			// IF THE ARTICLE HAS A MULTIMEDIA ARRAY - NOT EMPTY
+			// array.length different than Zero
+			// GET THE PHOTO URL AND PLACE IS IN NEWSRESULTS ARRAY
+			// url: http://www.nytimes.com/
+			var lekson = newsarray[i].multimedia[1].url;
+			console.log(lekson);
+
+			// Insert each movie's title into the results array
+			newsresults.push("<b>Title:</b> " + newsarray[i].headline.main + "<br>");
+
+			// Insert each movie's date into the results array
+			newsresults.push("<b>what:</b> " + newsarray[i].lead_paragraph + "<br><hr><br>");
+
+			// INSERT ARTICLE URL AS WELL - BUTTON 'CLICK TO READ MORE'
+
+		  }
+
+		  $(".results").html(newsresults.join(""));
+
+		}).fail(function(err) {
+		  throw err;
+		});
+
 
 }
 
