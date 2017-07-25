@@ -89,6 +89,10 @@ hr {
 
 	.form-group{
 		width: 100%;
+	} 
+
+	.home-title {
+		font-size: 16px;
 	}
 }
 
