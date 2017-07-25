@@ -80,15 +80,27 @@ hr {
 	}
 
 	.home-title {
-		font-size: 26px;
+		font-size: 28px;
 	}
 
 	.container {
 		width: 95%;
 	}
 
-    nav {
-    	width: 70%;
+    .music {
+    	width: 80%;
+    }
+
+    .movies {
+    	width: 80%;
+    }
+
+    .news {
+    	width: 80%;
+    }
+
+    .gifs {
+    	width: 80%;
     }
 
 }
