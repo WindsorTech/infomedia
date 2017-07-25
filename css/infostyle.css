@@ -91,6 +91,10 @@ hr {
 		font-size: 18px;
 	}
 
+	ul {
+		vertical-align: center;
+	}
+
     .music {
     	width: 95%;
     }
