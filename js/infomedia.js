@@ -157,7 +157,7 @@ function musicSearch() {
 		 };
 
 		// Insert logo into array
-		displaylogo.push("<center><img src='images/lastfm.png' width=160 height=50></center><br>");
+		displaylogo.push("<center><img src='images/lastfm.png' width=160 height=50></center>");
 
 		// display songs info array on page left side
 		$(".left-side").html(displaysongsleft.join(""));
@@ -213,7 +213,7 @@ function movieSearch() {
 
 		}
 		// display MovieDB icon on footer
-		movieresults.push("<center><img src='images/moviedb.png' width=160 height=60></center><br>");
+		movieresults.push("<center><img src='images/moviedb.png' width=160 height=60></center>");
 
 		// display movie results array on the page
 		$(".results").html(movieresults.join(""));
@@ -229,7 +229,7 @@ function newsSearch() {
 	// Get the user input in text field
 	var searchTerm = $(".user-input").val().trim();
 
-
+	// Ajax call to the New York Times API
 	var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
 
 		url += '?' + $.param({
@@ -241,35 +241,38 @@ function newsSearch() {
 		  url: url,
 		  method: 'GET',
 		}).done(function(result) {
-		  
-		  console.log(result);
 
+			// Array with the API results
 		  var newsarray = result.response.docs;
 
+		  // Create empty array to store info to be displayed
 		  var newsresults = [];
 
+		  // For loop through the API results array
 		  for (var i = 0; i < newsarray.length; i++) {
+	
+		  	// If the article has a image available, display image - otherwise display our placeholder
+			if (newsarray[i].multimedia.length != 0) {
 
-		  	// Insert each movie's image into the results array
-			//newsresults.push("<table><tr><td><img src='https://www.nytimes.com/"+ newsarray[i].multimedia[1].url +"'></td>&nbsp;&nbsp;&nbsp;&nbsp;");
+				newsresults.push("<table><tr><td><img src='http://www.nytimes.com/"+ newsarray[i].multimedia[1].url +"' width=150 height=150 class='news-image'></td>&nbsp;&nbsp;&nbsp;&nbsp;");
+			} else {
+				newsresults.push("<table><tr><td><img src='images/no-image.jpg' width=150 height=150 class='news-image'></td>&nbsp;&nbsp;&nbsp;&nbsp;");
+			}
+
+			// Insert each articles title into the results array
+			newsresults.push("<td><h3>" + newsarray[i].headline.main + "</h3>");
+
+			// Insert each articles paragraph into the results array
+			newsresults.push("" + newsarray[i].lead_paragraph + "<br><br>");
+
+			// Create button with article link
+			newsresults.push("<a href=" + newsarray[i].web_url + " target='_blank' class='btn btn-primary btn-sm'>Read More</a></td></tr></table><hr>");
 			
-			// IF THE ARTICLE HAS A MULTIMEDIA ARRAY - NOT EMPTY
-			// array.length different than Zero
-			// GET THE PHOTO URL AND PLACE IS IN NEWSRESULTS ARRAY
-			// url: http://www.nytimes.com/
-			var lekson = newsarray[i].multimedia[1].url;
-			console.log(lekson);
-
-			// Insert each movie's title into the results array
-			newsresults.push("<b>Title:</b> " + newsarray[i].headline.main + "<br>");
-
-			// Insert each movie's date into the results array
-			newsresults.push("<b>what:</b> " + newsarray[i].lead_paragraph + "<br><hr><br>");
-
-			// INSERT ARTICLE URL AS WELL - BUTTON 'CLICK TO READ MORE'
-
 		  }
+		  // display the NYT logo on page
+		  newsresults.push("<center><img src='images/new-york-times.png' width=210 height=55></center>");
 
+		  // display news results array on the page
 		  $(".results").html(newsresults.join(""));
 
 		}).fail(function(err) {
@@ -286,7 +289,7 @@ function gifSearch() {
 	// Get the user input in text field
 	var searchTerm = $(".user-input").val().trim();
 
-	// Ajax call to the Movie DB API
+	// Ajax call to the Giphy API
 	$.ajax({
 
 		url: "https://api.giphy.com/v1/gifs/search?q="+ searchTerm +"&api_key=7b327206a9284ab988a6d8be3fa003a2&limit=30",
@@ -295,27 +298,25 @@ function gifSearch() {
 
 	}).done(function(response){
 
-		console.log(response);
-
+		// Array with the API results
 		var gifarray = response.data;
-
+		// Empty array to store results to be displayed
 		var gifresults = [];
 
+		// Loop through API results array
 		for (var i = 0; i < gifarray.length; i++) {
 
-
+			// add all GIFs to the empty array
 			gifresults.push("&nbsp;&nbsp;<img src='"+ gifarray[i].images.fixed_width.url +"'>&nbsp;&nbsp;&nbsp;&nbsp;");
 
 		}
+			// display GIPHY logo
+		gifresults.push("<hr><center><img src='images/giphy.png' width=160 height=45></center>");
 
-		gifresults.push("<hr><center><img src='images/giphy.png' width=160 height=45></center><br>");
-
+		// display GIFs results array on the page
 		$(".results").html(gifresults.join(""));
 
 	});
 
-
 }
-
-
 });
