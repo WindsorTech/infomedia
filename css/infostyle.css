@@ -87,6 +87,10 @@ hr {
 		width: 95%;
 	}
 
+	.navbar-header {
+		width: 90%;
+	}
+
 	.active {
     	width: 90%;
     }
