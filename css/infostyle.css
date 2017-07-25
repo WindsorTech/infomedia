@@ -92,7 +92,8 @@ hr {
 	}
 
 	ul {
-		vertical-align: center;
+		width: 80%;
+		margin: auto;
 	}
 
     .music {
