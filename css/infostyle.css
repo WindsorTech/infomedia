@@ -91,11 +91,6 @@ hr {
 		width: 95%;
 	}
 
-	.active {
-		display: block;
-		width: 30%;
-	}
-
     .music {
     	width: 95%;
     }
@@ -110,6 +105,10 @@ hr {
 
     .gifs {
     	width: 95%;
+    }
+
+    .select {
+    	width: 40%;
     }
 
 }
