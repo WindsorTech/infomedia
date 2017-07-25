@@ -79,21 +79,18 @@ hr {
     	display: none;
 	}
 
+	.home-title {
+		font-size: 20px;
+	}
+
 	.container {
 		width: 95%;
 	}
 
-	.navbar-header{
-		width: 100%;
+	.searchbar {
+		width: 90%;
 	}
 
-	.form-group{
-		width: 100%;
-	} 
-
-	.home-title {
-		font-size: 16px;
-	}
 }
 
 @media only screen and (min-width: 376px) and (max-width: 667px) {}
