@@ -87,9 +87,11 @@ hr {
 		width: 95%;
 	}
 
-	.searchbar {
-		width: 90%;
+	form {
+		width: 60%;
 	}
+
+	
 
 }
 
