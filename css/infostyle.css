@@ -88,8 +88,7 @@ hr {
 	}
 
 	li {
-		font-size: 20px;
-		text-align: center;
+		font-size: 18px;
 	}
 
     .music {
@@ -110,6 +109,7 @@ hr {
 
     .select {
     	width: 20%;
+    	vertical-align: center;
     }
 
 }
