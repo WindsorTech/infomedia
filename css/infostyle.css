@@ -80,18 +80,16 @@ hr {
 	}
 
 	.home-title {
-		font-size: 20px;
+		font-size: 24px;
 	}
 
 	.container {
 		width: 95%;
 	}
 
-	form {
-		width: 60%;
+	.searchbar {
+		width: 20%;
 	}
-
-	
 
 }
 
