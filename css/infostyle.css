@@ -87,20 +87,24 @@ hr {
 		width: 95%;
 	}
 
+	.active {
+    	width: 90%;
+    }
+
     .music {
-    	width: 80%;
+    	width: 90%;
     }
 
     .movies {
-    	width: 80%;
+    	width: 90%;
     }
 
     .news {
-    	width: 80%;
+    	width: 90%;
     }
 
     .gifs {
-    	width: 80%;
+    	width: 90%;
     }
 
 }
