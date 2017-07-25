@@ -87,28 +87,22 @@ hr {
 		width: 95%;
 	}
 
-	.navbar-header {
-		width: 90%;
-	}
 
-	li {
-		width: 50%;
-	}
 
     .music {
-    	width: 90%;
+    	width: 95%;
     }
 
     .movies {
-    	width: 90%;
+    	width: 95%;
     }
 
     .news {
-    	width: 90%;
+    	width: 95%;
     }
 
     .gifs {
-    	width: 90%;
+    	width: 95%;
     }
 
 }
