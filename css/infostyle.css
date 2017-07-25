@@ -87,8 +87,9 @@ hr {
 		width: 95%;
 	}
 
-	.navbar-header {
-		width: 95%;
+	li {
+		font-size: 20px;
+		text-align: center;
 	}
 
     .music {
