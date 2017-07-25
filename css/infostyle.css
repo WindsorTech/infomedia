@@ -91,9 +91,9 @@ hr {
 		width: 90%;
 	}
 
-	.active {
-    	width: 10%;
-    }
+	li {
+		width: 50%;
+	}
 
     .music {
     	width: 90%;
