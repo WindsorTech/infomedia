@@ -115,7 +115,8 @@ hr {
     }
 
     .form-group {
-    	width: 20%;
+    	display: block;
+    	width: 200px;
     }
 
 
