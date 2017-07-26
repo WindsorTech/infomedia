@@ -114,6 +114,10 @@ hr {
     	text-align: center;
     }
 
+    .form-group {
+    	width: 20%;
+    }
+
 
 }
 
