@@ -87,12 +87,23 @@ hr {
 		width: 95%;
 	}
 
-	ul {
-		width: 90%;
-		margin: auto;
-	}
 
-  
+
+    .music {
+    	width: 95%;
+    }
+
+    .movies {
+    	width: 95%;
+    }
+
+    .news {
+    	width: 95%;
+    }
+
+    .gifs {
+    	width: 95%;
+    }
 
     .select {
     	width: 20%;
