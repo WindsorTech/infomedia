@@ -115,7 +115,7 @@ hr {
     }
 
     input {
-    	display: inline-block;
+    	margin: auto;
     	width: 50%;
     }
 
