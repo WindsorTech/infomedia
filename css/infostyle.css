@@ -114,10 +114,9 @@ hr {
     	text-align: center;
     }
 
-    .user-input {
-    	width: 5ch;
-    }
-
+	.navbar-form.navbar-left {
+		width: 60%;
+	}
 
 }
 
