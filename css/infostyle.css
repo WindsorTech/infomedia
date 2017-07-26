@@ -114,7 +114,7 @@ hr {
     	text-align: center;
     }
 
-    .user-input {
+    input {
     	display: block;
     	width: 20%;
     }
