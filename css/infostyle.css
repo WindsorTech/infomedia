@@ -114,9 +114,9 @@ hr {
     	text-align: center;
     }
 
-    input[type=text] {
-    	width: 80%;
-	}
+    .user-input {
+   		-webkit-border-radius: 10px;
+    }
 
 
 }
