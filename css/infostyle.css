@@ -115,8 +115,8 @@ hr {
     }
 
     input {
-    	display: block;
-    	width: 20%;
+    	display: inline-block;
+    	width: 50%;
     }
 
 
