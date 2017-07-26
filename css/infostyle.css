@@ -114,9 +114,11 @@ hr {
     	text-align: center;
     }
 
-  	#bs-example-navbar-collapse-1 {
-  		width: 80%;
-  	}
+    .searchbar {
+    	width: 70%;
+    }
+
+
 }
 
 @media only screen and (min-width: 376px) and (max-width: 667px) {}
