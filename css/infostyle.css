@@ -87,6 +87,10 @@ hr {
 		width: 95%;
 	}
 
+	.container-fluid {
+		width: 100%
+	}
+
 	ul {
 		width: 80%;
 		margin: auto;
@@ -115,9 +119,13 @@ hr {
     	margin: auto;
     }
 
-	.container-fluid {
-		width: 100%
-	}
+    .user-input {
+    	width: 40%;
+    }
+
+    form {
+    	width: 40%;
+    }
 
 }
 
