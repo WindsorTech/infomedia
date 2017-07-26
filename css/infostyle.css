@@ -114,6 +114,13 @@ hr {
     	text-align: center;
     }
 
+    input {
+    	width: 30%;
+    }
+
+	button {
+		width: 20%;
+	}
 }
 
 @media only screen and (min-width: 376px) and (max-width: 667px) {}
