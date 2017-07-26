@@ -120,7 +120,7 @@ hr {
     }
 
     .user-input {
-    	overflow: visible;
+    	width: 70%;
     }
 
 }
