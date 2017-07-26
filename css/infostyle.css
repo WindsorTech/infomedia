@@ -88,7 +88,7 @@ hr {
 	}
 
 	ul {
-		width: 85%;
+		width: 80%;
 		margin: auto;
 	}
 
@@ -116,7 +116,6 @@ hr {
 
 	.container-fluid {
 		width: 100%
-		margin: auto;
 	}
 
 }
