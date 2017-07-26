@@ -114,8 +114,8 @@ hr {
     	text-align: center;
     }
 
-    .user-input {
-   		-webkit-border-radius: 10px;
+    .collapse {
+    	width: 50%;
     }
 
 
