@@ -124,6 +124,10 @@ hr {
     	margin-bottom: 5px;
     }
 
+    .form-group {
+    	margin: auto;
+    }
+
     .fire {
     	width: 80%;
     	align-self: center;
