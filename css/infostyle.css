@@ -114,9 +114,8 @@ hr {
     	text-align: center;
     }
 
-  	.user-input {
-  		width: 100%;
-  		size: 10;
+  	#bs-example-navbar-collapse-1 {
+  		width: 80%;
   	}
 }
 
