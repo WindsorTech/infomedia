@@ -114,9 +114,9 @@ hr {
     	text-align: center;
     }
 
-    .fire {
-    	width: 40%;
-    }
+    input[type=text] {
+    	width: 80%;
+	}
 
 
 }
