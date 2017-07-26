@@ -114,11 +114,11 @@ hr {
     	text-align: center;
     }
 
-    input {
+    .user-input {
     	width: 30%;
     }
 
-	button {
+	.fire {
 		width: 20%;
 	}
 }
