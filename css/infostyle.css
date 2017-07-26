@@ -121,12 +121,11 @@ hr {
 
     .user-input {
     	width: 100%;
+    	margin-bottom: 5px;
     }
 
     .fire {
-    	width: 85%;
-    	margin-top: 5px;
-    	margin: auto;
+    	width: 100%;
     }
 
 }
