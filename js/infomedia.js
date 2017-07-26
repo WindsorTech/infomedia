@@ -256,7 +256,7 @@ function newsSearch() {
 
 				newsresults.push("<table><tr><td><img src='http://www.nytimes.com/"+ newsarray[i].multimedia[1].url +"' width=150 height=150 class='news-image'></td>&nbsp;&nbsp;&nbsp;&nbsp;");
 			} else {
-				newsresults.push("<table><tr><td><img src='images/no-image.jpg' width=150 height=150 class='news-image'></td>&nbsp;&nbsp;&nbsp;&nbsp;");
+				newsresults.push("<table><tr><td><img src='images/no-image.png' width=150 height=150 class='news-image'></td>&nbsp;&nbsp;&nbsp;&nbsp;");
 			}
 
 			// Insert each articles title into the results array
