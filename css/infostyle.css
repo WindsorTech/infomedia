@@ -115,11 +115,11 @@ hr {
     }
 
     .user-input {
-    	width: 30%;
+    	width: 100px;
     }
 
 	.fire {
-		width: 20%;
+		width: 20px;
 	}
 }
 
