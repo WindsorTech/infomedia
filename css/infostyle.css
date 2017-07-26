@@ -114,13 +114,9 @@ hr {
     	text-align: center;
     }
 
-    .user-input {
-    	width: 100px;
-    }
-
-	.fire {
-		width: 20px;
-	}
+  	form {
+  		width: 70%;
+  	}
 }
 
 @media only screen and (min-width: 376px) and (max-width: 667px) {}
