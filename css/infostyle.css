@@ -114,9 +114,8 @@ hr {
     	text-align: center;
     }
 
-    form {
-    	margin: auto;
-    	width: 50%;
+    .navbar-left {
+    	width: 40%;
     }
 
 
