@@ -114,9 +114,9 @@ hr {
     	text-align: center;
     }
 
-    .form-control {
-    	width: 60%;
-    }
+ 	.user-input {
+ 		width: 80%;
+ 	}
 
 
 }
