@@ -109,10 +109,10 @@ hr {
     }
 
     .select {
-    	width: 100%;
+    	width: 95%;
     	font-size: 17px;
     	text-align: center;
-    	
+    	margin: auto;
     }
 
 	.container-fluid {
