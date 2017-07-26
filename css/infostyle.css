@@ -57,8 +57,17 @@ hr {
 	color: #073b8e;
 	text-align: center;
 	font-size: 40px;
-	margin-bottom: 20px;
+	margin-bottom: 5px;
 	text-decoration: none;
+
+}
+
+.home-copyright {
+	font-family: 'Ubuntu', sans-serif;
+	color: black;
+	text-align: center;
+	font-size: 18px;
+	margin-bottom: 20px;
 
 }
 
@@ -81,6 +90,10 @@ hr {
 
 	.home-title {
 		font-size: 30px;
+	}
+
+	.home-copyright {
+		font-size: 8px;
 	}
 
 	.container {
