@@ -307,7 +307,7 @@ function gifSearch() {
 		for (var i = 0; i < gifarray.length; i++) {
 
 			// add all GIFs to the empty array
-			gifresults.push("&nbsp;&nbsp;<img src='"+ gifarray[i].images.fixed_width.url +"'>&nbsp;&nbsp;&nbsp;&nbsp;");
+			gifresults.push("&nbsp;&nbsp;<img src='"+ gifarray[i].images.fixed_width.url +"' class='gif-images'>&nbsp;&nbsp;&nbsp;&nbsp;");
 
 		}
 			// display GIPHY logo
