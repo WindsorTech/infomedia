@@ -30,8 +30,16 @@ hr {
 	margin-left: 25%;
 }
 
+.song-btn {
+	width: 150px;
+}
+
 .news-image {
 	margin-right: 20px;
+}
+
+.news-btn {
+	width: 150px;
 }
 
 .movie-text {
