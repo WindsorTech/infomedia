@@ -147,6 +147,10 @@ hr {
     	width: 95%;
     }
 
+    .song-table {
+		margin-left: 5%;
+	}
+
 }
 
 @media only screen and (min-width: 376px) and (max-width: 667px) {}
