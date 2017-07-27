@@ -154,11 +154,15 @@ hr {
 
 	.movie-text {
 		font-size: 16px;
+		margin: auto;
 	}
 
 	.mobile-movie {
 		display: block;
-		margin: auto;
+	}
+
+	.movie-pic {
+		margin-bottom: 5px;
 	}
 
 	.gif-images {
