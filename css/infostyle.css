@@ -225,5 +225,21 @@ hr {
 		margin-top: 10px;
 	}
 
+	.home-title {
+		font-size: 30px;
+	}
+
+	.home-copyright {
+		font-size: 14px;
+	}
+
+	.container {
+		width: 95%;
+	}
+
+	.container-fluid {
+		width: 100%
+	}
+
 
 }
