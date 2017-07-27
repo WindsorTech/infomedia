@@ -156,9 +156,8 @@ hr {
 		font-size: 16px;
 	}
 
-	.movie-pic {
-		display: table-cell;
-  		vertical-align: middle;
+	.mobile-movie {
+		display: block;
 	}
 
 	.gif-images {

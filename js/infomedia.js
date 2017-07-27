@@ -200,10 +200,10 @@ function movieSearch() {
 		for (var i = 0; i < 20; i++) {
 
 			// Insert each movie's image into the results array
-			movieresults.push("<table class='movie-text'><tr><td><img class='movie-pic' src='https://image.tmdb.org/t/p/original"+ moviearray[i].poster_path +"' width=150 height=200></td>&nbsp;&nbsp;&nbsp;&nbsp;");
+			movieresults.push("<table class='movie-text'><tr><td class='mobile-movie'><img class='movie-pic' src='https://image.tmdb.org/t/p/original"+ moviearray[i].poster_path +"' width=150 height=200></td>&nbsp;&nbsp;&nbsp;&nbsp;");
 
 			// Insert each movie's title into the results array
-			movieresults.push("<td><b>Movie Title:</b> " + moviearray[i].title + "<br>");
+			movieresults.push("<td class='mobile-movie'><b>Movie Title:</b> " + moviearray[i].title + "<br>");
 
 			// Insert each movie's date into the results array
 			movieresults.push("<b>Release Date:</b> " + moviearray[i].release_date + "<br>");
