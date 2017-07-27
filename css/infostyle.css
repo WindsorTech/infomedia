@@ -154,11 +154,11 @@ hr {
 
 	.movie-text {
 		font-size: 16px;
-		vertical-align: top;
+		display: table;
 	}
 
 	.movie-pic {
-		display: block;
+		display: table;
 	}
 
 	.gif-images {
