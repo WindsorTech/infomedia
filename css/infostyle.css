@@ -199,6 +199,10 @@ hr {
 		width: 100%;
 	}
 
+	.song-btn {
+		width: 80%;
+	}
+
 }
 
 @media only screen and (min-width: 376px) and (max-width: 667px) {}
