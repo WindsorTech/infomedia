@@ -157,12 +157,13 @@ hr {
 		margin: auto;
 	}
 
-	.mobile-movie {
-		display: block;
-	}
-
 	.movie-pic {
 		margin-bottom: 15px;
+	}
+
+	.mobile-movie {
+		display: block;
+		width: 100%;
 	}
 
 	.gif-images {
