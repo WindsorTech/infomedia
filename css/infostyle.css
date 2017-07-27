@@ -94,7 +94,7 @@ hr {
 	background: white;
 }
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 480px) {
 
 	.advert {
     	display: none;
@@ -213,5 +213,3 @@ hr {
 	}
 
 }
-
-@media only screen and (min-width: 376px) and (max-width: 667px) {}
