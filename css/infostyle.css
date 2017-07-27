@@ -2,6 +2,10 @@ hr {
 	border-color: #bfbfbf;
 }
 
+.mobile-advert {
+	display: none;
+}
+
 .music-pic {
 	margin-right: 10px;
 }
