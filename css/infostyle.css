@@ -92,6 +92,10 @@ hr {
     	display: none;
 	}
 
+	.mobile-advert {
+		display: block;
+	}	
+
 	.home-title {
 		font-size: 30px;
 	}
