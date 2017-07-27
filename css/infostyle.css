@@ -155,11 +155,12 @@ hr {
 	.movie-text {
 		font-size: 18px;
 		text-align: justify;
+		margin-top: 15px;
 	}
 
 	.movie-pic {
-		margin-bottom: 15px;
-		align-self: center;
+		display: block;
+    	margin: auto;
 	}
 
 	.mobile-movie {
