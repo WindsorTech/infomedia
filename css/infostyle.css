@@ -151,6 +151,10 @@ hr {
 		margin-left: 0px;
 	}
 
+	.song-infos {
+		width: 100%;
+	}
+
 }
 
 @media only screen and (min-width: 376px) and (max-width: 667px) {}
