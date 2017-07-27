@@ -151,7 +151,7 @@ function musicSearch() {
 		    displaysongsright.push("<b>Artist:</b> " + musicarray[i].artist + "<br>");
 
 		    // Insert song links into the array
-		    displaysongsright.push("<a href=" + musicarray[i].url +" target='_blank' class='btn btn-primary btn-xs'>More Info</a></td></tr></table><hr>");
+		    displaysongsright.push("<a href=" + musicarray[i].url +" target='_blank' class='btn btn-primary btn-xs song-btn'>More Info</a></td></tr></table><hr>");
 
 
 		 };

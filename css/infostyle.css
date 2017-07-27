@@ -158,7 +158,6 @@ hr {
     .song-table {
 		margin-left: 0px;
 		width: 100%;
-		text-align: justify;
 	}
 
 	.music-pic {
@@ -197,6 +196,10 @@ hr {
 	}
 
 	.news-btn {
+		width: 100%;
+	}
+
+	.song-btn {
 		width: 100%;
 	}
 
