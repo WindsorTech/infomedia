@@ -203,7 +203,7 @@ function movieSearch() {
 			movieresults.push("<table class='movie-text'><tr><td class='mobile-movie'><img class='movie-pic' src='https://image.tmdb.org/t/p/original"+ moviearray[i].poster_path +"' width=150 height=200></td>&nbsp;&nbsp;&nbsp;&nbsp;");
 
 			// Insert each movie's title into the results array
-			movieresults.push("<td class='mobile-movie'><b>Movie Title:</b> " + moviearray[i].title + "<br>");
+			movieresults.push("<td class='mobile-movie top-margin'><b>Movie Title:</b> " + moviearray[i].title + "<br>");
 
 			// Insert each movie's date into the results array
 			movieresults.push("<b>Release Date:</b> " + moviearray[i].release_date + "<br>");
