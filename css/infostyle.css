@@ -154,6 +154,7 @@ hr {
 
 	.movie-text {
 		font-size: 16px;
+		display: block;
 	}
 
 	.movie-pic {
