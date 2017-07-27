@@ -154,12 +154,12 @@ hr {
 
 	.movie-text {
 		font-size: 18px;
-		width: 95%;
-		margin: auto;
+		text-align: justify;
 	}
 
 	.movie-pic {
 		margin-bottom: 15px;
+		margin: auto;
 	}
 
 	.mobile-movie {
