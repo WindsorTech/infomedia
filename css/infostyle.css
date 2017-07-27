@@ -154,7 +154,6 @@ hr {
 
 	.movie-text {
 		font-size: 18px;
-		margin: auto;
 	}
 
 	.movie-pic {
@@ -162,8 +161,9 @@ hr {
 	}
 
 	.mobile-movie {
+		width: 95%;
 		display: block;
-		width: 100%;
+		margin: auto;
 	}
 
 	.gif-images {
