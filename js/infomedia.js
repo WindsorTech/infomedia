@@ -145,13 +145,13 @@ function musicSearch() {
 			displaysongsright.push("<table class='song-table'><tr><td><img class='music-pic' src=" + musicarray[i].image[1]["#text"] + "></td>");
 			
 			// Insert song names into the displaysongs array
-		    displaysongsright.push("<td><b>Song:</b> " + musicarray[i].name + "<br>");
+		    displaysongsright.push("<td class='news-btn'><b>Song:</b> " + musicarray[i].name + "<br>");
 
 		    // Insert artists names into the displaysongs array
 		    displaysongsright.push("<b>Artist:</b> " + musicarray[i].artist + "<br>");
 
 		    // Insert song links into the array
-		    displaysongsright.push("<a href=" + musicarray[i].url +" target='_blank' class='btn btn-primary btn-xs song-btn'>More Info</a></td></tr></table><hr>");
+		    displaysongsright.push("<a href=" + musicarray[i].url +" target='_blank' class='btn btn-primary btn-xs news-btn'>More Info</a></td></tr></table><hr>");
 
 
 		 };
