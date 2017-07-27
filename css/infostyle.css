@@ -186,6 +186,10 @@ hr {
 		display: none;
 	}	
 
+	.news-justify {
+		text-align: justify;
+	}
+
 
 }
 

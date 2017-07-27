@@ -260,7 +260,7 @@ function newsSearch() {
 			}
 
 			// Insert each articles title into the results array
-			newsresults.push("<td><h3>" + newsarray[i].headline.main + "</h3>");
+			newsresults.push("<td class='news-justify'><h3>" + newsarray[i].headline.main + "</h3>");
 
 			// Insert each articles paragraph into the results array
 			newsresults.push("" + newsarray[i].lead_paragraph + "<br><br>");
