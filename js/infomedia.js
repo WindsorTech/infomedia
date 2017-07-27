@@ -266,7 +266,7 @@ function newsSearch() {
 			newsresults.push("" + newsarray[i].lead_paragraph + "<br><br>");
 
 			// Create button with article link
-			newsresults.push("<a href=" + newsarray[i].web_url + " target='_blank' class='btn btn-primary btn-sm'>Read More</a></td></tr></table><hr>");
+			newsresults.push("<a href=" + newsarray[i].web_url + " target='_blank' class='btn btn-primary btn-sm news-btn'>Read More</a></td></tr></table><hr>");
 			
 		  }
 		  // display the NYT logo on page
