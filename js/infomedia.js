@@ -127,7 +127,7 @@ function musicSearch() {
 			displaysongsleft.push("<table class='song-table'><tr><td><img class='music-pic' src=" + musicarray[i].image[1]["#text"] + "></td>");
 			
 			// Insert song names into the displaysongs array
-		    displaysongsleft.push("<td class='song-infos'><b>Song:</b> " + musicarray[i].name + "<br>");
+		    displaysongsleft.push("<td><b>Song:</b> " + musicarray[i].name + "<br>");
 
 		    // Insert artists names into the displaysongs array
 		    displaysongsleft.push("<b>Artist:</b> " + musicarray[i].artist + "<br>");
