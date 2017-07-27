@@ -241,9 +241,15 @@ hr {
 		width: 100%
 	}
 
+	ul {
+		width: 100%;
+	}
+
 	.user-input {
     	width: 60%;
     }
+
+
 
 
 
