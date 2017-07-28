@@ -241,15 +241,15 @@ hr {
 		width: 100%
 	}
 
-	.form-group {
-		display: inline-block;
-	}
-
 	.user-input {
     	width: 60%;
+    	display: inline-block;
     }
 
- 
+    .fire {
+    	float: right;
+    	display: inline-block;
+    }
 
 
 
