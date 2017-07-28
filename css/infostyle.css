@@ -242,11 +242,12 @@ hr {
 	}
 
 	.user-input {
-    	width: 60%;
+    	width: 80%;
     	display: inline-block;
     }
 
     .fire {
+    	width: 20px;
     	float: right;
     	display: inline-block;
     }
