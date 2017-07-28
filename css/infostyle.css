@@ -265,9 +265,9 @@ hr {
 	}
 
 	.song-table {
-		width: 95%;
+		width: 80%;
 		display: block;
-		margin: auto;
+		margin: 0 auto;
 		font-size: 20px;
 	}
 
