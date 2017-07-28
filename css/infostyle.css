@@ -245,6 +245,10 @@ hr {
     	width: 60%;
     }
 
+    .form-group {
+    	display: inline;
+    }
+
 
 
 
