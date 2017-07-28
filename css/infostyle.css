@@ -264,6 +264,16 @@ hr {
     	width: 100%;
 	}
 
+	.song-table {
+		margin-left: 0px;
+		width: 100%;
+	}
+
+	.music-pic {
+		width: 85px;
+		height: 85px;
+	}
+
 
 
 }
