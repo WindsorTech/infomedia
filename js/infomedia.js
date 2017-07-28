@@ -124,7 +124,7 @@ function musicSearch() {
 		for (var i = 0; i < 10; i++) {
 
 			// Insert each song's image into the displaysongs array
-			displaysongsleft.push("<center><table class='song-table'><tr><td><img class='music-pic' src=" + musicarray[i].image[1]["#text"] + "></td>");
+			displaysongsleft.push("<table class='song-table'><tr><td><img class='music-pic' src=" + musicarray[i].image[1]["#text"] + "></td>");
 			
 			// Insert song names into the displaysongs array
 		    displaysongsleft.push("<td><b>Song:</b> " + musicarray[i].name + "<br>");
@@ -133,7 +133,7 @@ function musicSearch() {
 		    displaysongsleft.push("<b>Artist:</b> " + musicarray[i].artist + "<br>");
 
 		    // Insert song links into the array
-		    displaysongsleft.push("<a href=" + musicarray[i].url +" target='_blank' class='btn btn-primary btn-xs song-btn'>More Info</a></td></tr></table></center><hr>");
+		    displaysongsleft.push("<a href=" + musicarray[i].url +" target='_blank' class='btn btn-primary btn-xs song-btn'>More Info</a></td></tr></table><hr>");
 
 
 		 };
@@ -142,7 +142,7 @@ function musicSearch() {
 		for (var i = 10; i < 20; i++) {
 
 			// Insert each song's image into the displaysongs array
-			displaysongsright.push("<center><table class='song-table'><tr><td><img class='music-pic' src=" + musicarray[i].image[1]["#text"] + "></td>");
+			displaysongsright.push("<table class='song-table'><tr><td><img class='music-pic' src=" + musicarray[i].image[1]["#text"] + "></td>");
 			
 			// Insert song names into the displaysongs array
 		    displaysongsright.push("<td><b>Song:</b> " + musicarray[i].name + "<br>");
@@ -151,7 +151,7 @@ function musicSearch() {
 		    displaysongsright.push("<b>Artist:</b> " + musicarray[i].artist + "<br>");
 
 		    // Insert song links into the array
-		    displaysongsright.push("<a href=" + musicarray[i].url +" target='_blank' class='btn btn-primary btn-xs song-btn'>More Info</a></td></tr></table></center><hr>");
+		    displaysongsright.push("<a href=" + musicarray[i].url +" target='_blank' class='btn btn-primary btn-xs song-btn'>More Info</a></td></tr></table><hr>");
 
 
 		 };
