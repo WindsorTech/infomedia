@@ -100,10 +100,12 @@ function musicSearch() {
 	// Get the user input in text field
 	var searchTerm = $(".user-input").val().trim();
 
+	var musickey = keys.MUSIC_KEY;
+
 	// Ajax call to Last.fm API
 	$.ajax({
 
-		url: "https://ws.audioscrobbler.com/2.0/?method=track.search&limit=20&track="+ searchTerm +"&api_key=3ed080989b346fe17d267cb64b68d169&format=json",
+		url: "https://ws.audioscrobbler.com/2.0/?method=track.search&limit=20&track="+ searchTerm +"&api_key="+ musickey +"&format=json",
 		method: "GET"
 
 	}).done(function(response){
@@ -179,10 +181,12 @@ function movieSearch() {
 	// Get the user input in text field
 	var searchTerm = $(".user-input").val().trim();
 
+	var moviekey = keys.MOVIE_KEY;
+
 	// Ajax call to the Movie DB API
 	$.ajax({
 
-		url: "https://api.themoviedb.org/3/search/movie?api_key=0bf8a8c93d69a18b3d61366957b2e726&query="+ searchTerm +"",
+		url: "https://api.themoviedb.org/3/search/movie?api_key="+ moviekey +"&query="+ searchTerm +"",
 		method: "GET"
 
 
@@ -229,11 +233,13 @@ function newsSearch() {
 	// Get the user input in text field
 	var searchTerm = $(".user-input").val().trim();
 
+	var newskey = keys.NEWS_KEY;
+
 	// Ajax call to the New York Times API
 	var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
 
 		url += '?' + $.param({
-		  'api-key': "575b62a9683544cebd2f87a73bf83854",
+		  'api-key': newskey,
 		  'q': searchTerm,
 		  'sort': "newest"
 		});
@@ -289,10 +295,12 @@ function gifSearch() {
 	// Get the user input in text field
 	var searchTerm = $(".user-input").val().trim();
 
+	var gifkey = keys.GIF_KEY;
+
 	// Ajax call to the Giphy API
 	$.ajax({
 
-		url: "https://api.giphy.com/v1/gifs/search?q="+ searchTerm +"&api_key=7b327206a9284ab988a6d8be3fa003a2&limit=30",
+		url: "https://api.giphy.com/v1/gifs/search?q="+ searchTerm +"&api_key="+ gifkey +"&limit=30",
 		method: "GET"
 
 
