@@ -100,6 +100,7 @@ function musicSearch() {
 	// Get the user input in text field
 	var searchTerm = $(".user-input").val().trim();
 
+	// API key
 	var musickey = keys.MUSIC_KEY;
 
 	// Ajax call to Last.fm API
@@ -181,6 +182,7 @@ function movieSearch() {
 	// Get the user input in text field
 	var searchTerm = $(".user-input").val().trim();
 
+	// API key
 	var moviekey = keys.MOVIE_KEY;
 
 	// Ajax call to the Movie DB API
@@ -294,7 +296,8 @@ function gifSearch() {
 
 	// Get the user input in text field
 	var searchTerm = $(".user-input").val().trim();
-
+	
+	// API key
 	var gifkey = keys.GIF_KEY;
 
 	// Ajax call to the Giphy API
